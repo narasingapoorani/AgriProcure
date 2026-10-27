@@ -1,0 +1,188 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@500&display=swap');
+
+@theme {
+  --font-display: 'Inter', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-data: 'Roboto Mono', monospace;
+
+  /* Primary Brand: Forest Green & Fresh Green */
+  --color-field-950: #0f3b1e;
+  --color-field-900: #14532D; /* Primary Hover */
+  --color-field-800: #166534; /* Primary */
+  --color-field-700: #15803d;
+  --color-field-600: #16A34A; /* Success */
+  --color-field-500: #22C55E; /* Secondary Green */
+  --color-field-100: #dcfce7;
+  --color-field-50: #f0fdf4;
+
+  /* Surfaces & Backgrounds: Soothing Agricultural Pale Green */
+  --color-husk-50: #E5EFE8; /* Distinct soothing pale green background */
+  --color-husk-100: #FFFFFF; /* Surface / Cards */
+  --color-husk-200: #C8DBD0; /* Sage border */
+
+  /* Warnings / Accents: Harvest Gold */
+  --color-harvest-600: #D97706; /* Warning */
+  --color-harvest-500: #F59E0B; /* Accent / Harvest */
+  --color-harvest-100: #fef3c7;
+
+  /* Text & Icons: Natural Neutrals */
+  --color-soil-900: #0c140f;
+  --color-soil-800: #17211B; /* Text */
+  --color-soil-700: #2d3e34;
+  --color-soil-600: #526357; /* Muted Text */
+  --color-soil-500: #6b8072;
+  --color-soil-400: #93a69a;
+
+  /* Semantics */
+  --color-sky-info: #0ea5e9;
+  --color-warn-600: #D97706; /* Warning */
+  --color-danger-600: #DC2626; /* Error */
+  --color-danger-100: #fee2e2;
+  --color-warn-100: #fef3c7;
+  --color-ok-100: #16A34A; /* Success */
+
+  --color-razorpay-navy: #0c2340;
+}
+
+/* Light theme overrides (matches default) */
+[data-theme='light'] {
+  --color-field-950: #0f3b1e;
+  --color-field-900: #14532D;
+  --color-field-800: #166534;
+  --color-field-700: #15803d;
+  --color-field-600: #16A34A;
+  --color-field-500: #22C55E;
+  --color-field-100: #CDE6D6;
+  --color-field-50: #DBEDE1;
+
+  --color-husk-50: #E5EFE8; /* Distinct soothing pale green background */
+  --color-husk-100: #FFFFFF;
+  --color-husk-200: #C8DBD0;
+  --color-husk-300: #b5cdc0;
+
+  --color-harvest-900: #78350f;
+  --color-harvest-800: #92400e;
+  --color-harvest-700: #b45309;
+  --color-harvest-600: #D97706;
+  --color-harvest-500: #F59E0B;
+  --color-harvest-400: #fbbf24;
+  --color-harvest-100: #fef3c7;
+  --color-harvest-50: #fffbeb;
+
+  --color-soil-900: #0c140f;
+  --color-soil-800: #17211B;
+  --color-soil-700: #2d3e34;
+  --color-soil-600: #526357;
+  --color-soil-500: #6b8072;
+  --color-soil-400: #93a69a;
+}
+
+[data-theme='dark'] {
+  --color-field-950: #f0fdf4;
+  --color-field-900: #4ade80;
+  --color-field-800: #16a34a; /* Solid active green */
+  --color-field-700: #22c55e;
+  --color-field-600: #4ade80;
+  --color-field-500: #86efac;
+  --color-field-100: #162a1e; /* Subtle dark green surface */
+  --color-field-50: #102116;
+
+  --color-husk-50: #0B120E; /* Deep Background */
+  --color-husk-100: #141F18; /* Surface / Cards */
+  --color-husk-200: #223427; /* Border / Elevated Surface */
+  --color-husk-300: #2e4434;
+
+  --color-harvest-900: #fef3c7;
+  --color-harvest-800: #fde68a;
+  --color-harvest-700: #fcd34d;
+  --color-harvest-600: #fbbf24;
+  --color-harvest-500: #f59e0b;
+  --color-harvest-400: #d97706;
+  --color-harvest-100: #2c200a;
+  --color-harvest-50: #1e1606;
+
+  --color-soil-900: #FFFFFF;
+  --color-soil-800: #F3F7F4; /* Primary Text - super crisp */
+  --color-soil-700: #E1E8E3;
+  --color-soil-600: #B8C7BD; /* Muted Text - clearly readable */
+  --color-soil-500: #9cb1a3;
+  --color-soil-400: #7b9483;
+  
+  /* Semantics */
+  --color-warn-600: #FBBF24;
+  --color-danger-600: #F87171;
+  --color-danger-100: #381616;
+  --color-ok-100: #14351f;
+  
+  --color-text: #F3F7F4;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-husk-50);
+  color: var(--color-soil-800);
+}
+
+h1, h2, h3, .font-display {
+  font-family: var(--font-display);
+}
+
+.font-data {
+  font-family: var(--font-data);
+}
+
+::selection {
+  background: var(--color-harvest-500);
+  color: #14261c;
+}
+
+*:focus-visible {
+  outline: 2px solid var(--color-field-700);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-husk-50);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-husk-200);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-soil-600);
+}
+
+/* AI Ambient Glow */
+.ai-glow {
+  box-shadow: 0 0 40px -10px var(--color-field-800);
+}
+
+/* Hover Lift Physics */
+.hover-lift {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+}
+[data-theme='dark'] .hover-lift:hover {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+}

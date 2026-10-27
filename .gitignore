@@ -1,0 +1,79 @@
+# =========================
+
+# React / Node
+
+# =========================
+
+node_modules/
+dist/
+build/
+.vite/
+
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Environment variables
+
+.env
+.env.*
+!.env.example
+
+# =========================
+
+# Python / Flask
+
+# =========================
+
+**pycache**/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+
+venv/
+.venv/
+env/
+ENV/
+
+# Flask
+
+instance/
+.webassets-cache/
+
+# Python packaging
+
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# =========================
+
+# IDE / OS
+
+# =========================
+
+.vscode/
+.idea/
+*.iml
+
+.DS_Store
+Thumbs.db
+
+# =========================
+
+# Logs / Secrets
+
+# =========================
+
+*.log
+*.sqlite3
+
+# =========================
+
+# Machine Learning Models
+
+# =========================
+
+*.joblib
